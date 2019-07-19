@@ -1,0 +1,51 @@
+body {
+  background-color: #ffffff;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  margin-right: 10%;
+  margin-left: 10%;
+  font-family: 'Raleway', sans-serif;
+}
+
+.header-box {
+  background-color: #7a4146;
+  color: #ffffff;
+  padding: 0px 0px 0px 0px;
+}
+
+.image {
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+  color: #ffffff;
+}
+
+hr {
+  width: 70%;
+  margin-left: auto;
+
+  }
+.header-box h1 {
+  font-size: 20 em;
+  padding: 70px 25px 30px 25px;
+}
+
+.content {
+  margin: 40px 0px 0px 30px;
+}
+
+.header-box p {
+  font-size: 1em;
+  padding: 50px 25px 50px 25px;
+}
+
+.photo-cred {
+  position: absolute;
+  bottom: 1%;
+  left: 1%;
+  height: 3%;
+}
+
+.other-recipes {
+  margin: 20px 0px 0px 35px;
+
+}
