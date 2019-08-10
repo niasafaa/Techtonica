@@ -1,0 +1,1 @@
+All exercises and deliverables for the Javascript lessons 1-5 can be found in a repl here: https://repl.it/@NiaCharrington/Assignments.
