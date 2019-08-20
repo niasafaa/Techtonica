@@ -1,9 +1,15 @@
 const express = require('express');
-
 const exphbs = require('express-handlebars');
+
+// .env lesson require statement for config file
+const { I_LOVE } = require('./config');
 const blogs = require('./blog');
 
 const app = express();
+const PORT = 3000;
+
+// Printing .env lesson enviromental variable
+console.log('I love ', I_LOVE);
 
 // Handlebars Middleware
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
@@ -46,14 +52,13 @@ app.post('/api/blogs', (req, res) => {
   res.redirect('/');
 });
 
-// app.use('/api/blogs');
+// Example of static webpage
 
 // app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/', (req, res) => {
-  res.sendFile('path.joing(__dirname', 'public');
-});
-const PORT = 3000;
+// app.get('/', (req, res) => {
+//   res.sendFile('path.joing(__dirname', 'public');
+// });
 
 app.listen(PORT, () => {
   console.log(`Server started on port ${PORT}`);
