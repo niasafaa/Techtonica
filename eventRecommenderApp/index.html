@@ -20,41 +20,7 @@
   </head>
 
   <body class="text-center image-responsive">
-    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
-      <header class="masthead mb-auto">
-        <div class="inner">
-          <h3 class="masthead-brand"></h3>
-          <nav class="nav nav-masthead justify-content-center">
-            <a class="nav-link active" href="styles/cover/#"></a>
-            <a class="nav-link" href="styles/cover/#"></a>
-            <a class="nav-link" href="styles/cover/#"></a>
-          </nav>
-        </div>
-      </header>
-
-      <main role="main" class="inner cover">
-        <h1 class="cover-heading">The Events Reccomender</h1>
-        <p class="lead">
-          Find great events in your price range, create new events, and add your favorite events to
-          your list.
-        </p>
-      </main>
-
-      <div class="container">
-        <br />
-        <center>
-          <button
-            class="btn btn-primary btn-lg signup"
-            href="#signin"
-            data-toggle="modal"
-            data-target=".log-sign"
-          >
-            Sign In/Register
-          </button>
-        </center>
-        <br />
-      </div>
-
+     
       <!-- Modal -->
       <div
         class="modal fade bs-modal-sm log-sign"
@@ -64,7 +30,9 @@
         aria-labelledby="mySmallModalLabel"
         aria-hidden="true"
       >
+  
         <div class="modal-dialog modal-sm">
+            <div class="loginwindow">
           <div class="modal-content">
             <div class="bs-example bs-example-tabs">
               <ul id="myTab" class="nav nav-tabs">
@@ -78,7 +46,7 @@
             </div>
             <div class="modal-body">
               <div id="myTabContent" class="tab-content">
-                <div class="tab-pane fade active in" id="signin">
+                <div class="tab-pane show fade active in" id="signin">
                   <form class="form-horizontal">
                     <fieldset>
                       <!-- Sign In Form -->
@@ -181,6 +149,7 @@
               </center>
             </div>-->
           </div>
+          </div>
         </div>
       </div>
 
@@ -223,17 +192,53 @@
             </div>
           </div>
         </div>
-      </div>
-      <footer class="mastfoot mt-auto">
+      </div>   
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+      <header class="masthead mb-auto">
         <div class="inner">
-          <p>
-            An object oriented project, please see my other work
-            <a href="https://github.com/niasafaa">GitHub</a>, by
-            <a href="https://twitter.com/niacharrington">@NiaCharrington</a>.
-          </p>
+          <h3 class="masthead-brand"></h3>
+          <nav class="nav nav-masthead justify-content-center">
+            <a class="nav-link active" href="styles/cover/#"></a>
+            <a class="nav-link" href="styles/cover/#"></a>
+            <a class="nav-link" href="styles/cover/#"></a>
+          </nav>
         </div>
+      </header>
+
+      <main role="main" class="inner cover">
+        <h1 class="cover-heading">The Events Reccomender</h1>
+        <p class="lead">
+          Find great events in your price range, create new events, and add your favorite events to
+          your list.
+        </p>
+        <div class="container">
+            <br />
+            <center>
+              <button
+                class="btn btn-primary btn-lg signupbtn"
+                href="#signin"
+                data-toggle="modal"
+                data-target=".log-sign"
+              >
+                Sign In/Register
+              </button>
+            </center>
+            <br />
+      </main>
+      <footer class="mastfoot mt-auto">
+          <div class="inner">
+            <p>
+              An object oriented project, please see my other work
+              <a href="https://github.com/niasafaa">GitHub</a>, by
+              <a href="https://twitter.com/niacharrington">@NiaCharrington</a>.
+            </p>
+          </div>
       </footer>
     </div>
+
+
+   
+
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

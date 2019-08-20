@@ -8,8 +8,9 @@ $(document).ready(function() {
   let location = '';
   let time = '';
   let cost = '';
-
+  let row = '';
   let html = ``;
+
   $.each(myEventsPageApp.events, function(index, event) {
     event = myEventsPageApp.events[index];
     image = event.photo;
@@ -17,6 +18,7 @@ $(document).ready(function() {
     time = event.time;
     cost = event.cost;
     location = event.location;
+
     let card = `
     <div class="card">
       <img src="${image}" class="card-img-top" alt="alt message">
@@ -29,9 +31,15 @@ $(document).ready(function() {
       </div>
     </div>`;
     html += card;
+    index += 1;
+    if (index % 3 === 0) {
+      row = `<div class="row"><div class="card-deck">${html}</div></div>`;
+      $('body').append(row);
+      html = '';
+    }
+    console.log(row);
   });
   console.log(html);
-  $('.card-deck').append(html);
 });
 
 /*

@@ -118,48 +118,48 @@ myEventsPageApp.addEvent(
   '$50',
   'event_images/img3.jpg'
 );
-// myEventsPageApp.addEvent(
-//   'Solstice Carnival',
-//   'JustDo It Pavillion',
-//   'Friday January 10th',
-//   'Free',
-//   'event_images/img4.jpg'
-// );
-// myEventsPageApp.addEvent(
-//   'Mobile Banking Conference',
-//   'Chase Center',
-//   'Monday Feburary 8th',
-//   '$500',
-//   'event_images/img5.jpg'
-// );
-// myEventsPageApp.addEvent(
-//   'Live By the Levee Music Festival',
-//   'Saint Louis Waterfront',
-//   'Saturday August 25th',
-//   '$225',
-//   'event_images/img6.jpg'
-// );
-// myEventsPageApp.addEvent(
-//   'Six Flags Fourth of July',
-//   'Six Flags Vallejo',
-//   'Sunday July 4th',
-//   '$45',
-//   'event_images/img7.jpg'
-// );
-// myEventsPageApp.addEvent(
-//   'Crystal Live Art',
-//   'Sage Tree Art Museum',
-//   'Sunday August 23rd',
-//   '$25',
-//   'event_images/img8.jpg'
-// );
-// myEventsPageApp.addEvent(
-//   'Annual Flea Market',
-//   'Portland Market St',
-//   'Sunday May 25th',
-//   'Free',
-//   'event_images/img9.jpg'
-// );
+myEventsPageApp.addEvent(
+  'Solstice Carnival',
+  'JustDo It Pavillion',
+  'Friday January 10th',
+  'Free',
+  'event_images/img4.jpg'
+);
+myEventsPageApp.addEvent(
+  'Mobile Banking Conference',
+  'Chase Center',
+  'Monday Feburary 8th',
+  '$500',
+  'event_images/img5.jpg'
+);
+myEventsPageApp.addEvent(
+  'Live By the Levee Music Festival',
+  'Saint Louis Waterfront',
+  'Saturday August 25th',
+  '$225',
+  'event_images/img6.jpg'
+);
+myEventsPageApp.addEvent(
+  'Six Flags Fourth of July',
+  'Six Flags Vallejo',
+  'Sunday July 4th',
+  '$45',
+  'event_images/img7.jpg'
+);
+myEventsPageApp.addEvent(
+  'Crystal Live Art',
+  'Sage Tree Art Museum',
+  'Sunday August 23rd',
+  '$25',
+  'event_images/img8.jpg'
+);
+myEventsPageApp.addEvent(
+  'Annual Flea Market',
+  'Portland Market St',
+  'Sunday May 25th',
+  'Free',
+  'event_images/img9.jpg'
+);
 
 // export EventRecommender object to jquery file
 // module.exports = myEventsPageApp;

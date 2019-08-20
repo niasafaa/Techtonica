@@ -1,24 +1,15 @@
 /*eslint-disable*/
 $(window, document, undefined).ready(function() {
-  $('.signup').click(function(event) {
+  $('.signupbtn').click(function(event) {
     event.preventDefault();
     $('main').hide();
-    $('.signup').hide();
+    $('.signupbtn').hide();
   });
 
-  $('.input').blur(function() {
-    var $this = $(this);
-    if ($this.val()) $this.addClass('used');
-    else $this.removeClass('used');
-  });
-
-  $('#tab1').on('click', function() {
-    $('#tab1').addClass('login-shadow');
-    $('#tab2').removeClass('signup-shadow');
-  });
-
-  $('#tab2').on('click', function() {
-    $('#tab2').addClass('signup-shadow');
-    $('#tab1').removeClass('login-shadow');
+  $('main').blur(function(event) {
+    event.preventDefault();
+    alert('hey');
+    $('main').show();
+    $('.signupbtn').show();
   });
 });
