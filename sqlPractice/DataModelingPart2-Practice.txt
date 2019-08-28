@@ -1,0 +1,51 @@
+Data Modeling Part 2: Multiple tables
+
+What are the entities?
+-Recipes
+-Ingredients
+-Recipe Ingredients
+-Restaurants
+-Locations
+-Chefs
+-Chef Restaurants
+What are the attributes of each entity? What are the data types of the attributes?
+-Recipes
+	- Recipe ID (INTEGER) PK
+	- Recipe Name (TEXT)
+	- Difficulty Level (INTEGER)
+	- Cook Time (REAL)
+	- Chef Info Id (INTEGER)
+
+-Ingredients
+	- Ingredient ID (INTEGER)
+	- Ingredient name (TEXT)
+-Recipe Ingredient 
+	- Recipe Id (INTEGER)
+	- Ingredient Id (INTEGER)
+	- Amount (REAL)
+	- Units (TEXT)
+-Restaurants
+	- Restaurant ID (INTEGER)
+	- Restaurant name (TEXT)
+	- Location Id (INTEGER)
+-Locations
+	- Location ID (INTEGER)
+	- City (TEXT)
+	- Country (TEXT)
+	- Zip Code (INTEGER)
+-Chefs
+	- Chef Id (INTEGER)Re
+	- Name (TEXT)
+	- Chef Location Id (INTEGER)
+	- Chefs favorite ingredient ID (INTEGER)
+Chef Restaurants
+	- Chef Id (INTEGER)
+	- Restaurant ID (INTEGER)
+	- START DATE (TEXT)
+	- END DATE (TEXT)
+
+What are the relationships between the entities? Draw a diagram of your data model.
+
+
+Is your data model normalized? Why or why not? If not, can you change it to be normalized?
+Are there other ways you might model this data?
