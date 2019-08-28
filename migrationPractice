@@ -1,0 +1,99 @@
+Last login: Wed Aug 28 09:04:50 on ttys000
+ncharringt-HF1T:~ ncharrington$ psql
+Password for user ncharrington: 
+psql (11.5)
+Type "help" for help.
+
+ncharrington=# create table migrationPractice (name varchar(10), gender TEXT, weight INTEGER, height REAL);
+CREATE TABLE
+ncharrington=# select * from migrationPractice;
+ name | gender | weight | height 
+------+--------+--------+--------
+(0 rows)
+ncharrington=# insert into table migrationPractice values ('Nancy', 'female', 165, 4.5),('Jim', 'male', 189, 6.2),('Eric', 'non-binary', 173, 5.8);  
+ERROR:  syntax error at or near "table"
+LINE 1: insert into table migrationPractice values ('Nancy', 'female...
+                    ^
+ncharrington=# insert into migrationPractice values ('Nancy', 'female', 165, 4.5),('Jim', 'male', 189, 6.2),('Eric', 'non-binary', 173, 5.8);  
+INSERT 0 3
+ncharrington=# select * from migrationPractice;
+ name  |   gender   | weight | height 
+-------+------------+--------+--------
+ Nancy | female     |    165 |    4.5
+ Jim   | male       |    189 |    6.2
+ Eric  | non-binary |    173 |    5.8
+(3 rows)
+
+ncharrington=# alter table migrationPractice add column age integer;
+ALTER TABLE
+ncharrington=# select * from migrationPractice;
+ name  |   gender   | weight | height | age 
+-------+------------+--------+--------+-----
+ Nancy | female     |    165 |    4.5 |    
+ Jim   | male       |    189 |    6.2 |    
+ Eric  | non-binary |    173 |    5.8 |    
+(3 rows)
+
+ncharrington=# alter table migrationPractice drop column age;
+ALTER TABLE
+ncharrington=# select * from migrationPractice;
+ name  |   gender   | weight | height 
+-------+------------+--------+--------
+ Nancy | female     |    165 |    4.5
+ Jim   | male       |    189 |    6.2
+ Eric  | non-binary |    173 |    5.8
+(3 rows)
+
+ncharrington=# alter table migrationPractice alter column age type VARCHAR(50);
+ERROR:  column "age" of relation "migrationpractice" does not exist
+ncharrington=# alter table migrationPractice alter column name type VARCHAR(50);
+ALTER TABLE
+ncharrington=# alter table migrationPractice rename column  name to firstname;
+ALTER TABLE
+ncharrington=# select * from migrationPractice;
+ firstname |   gender   | weight | height 
+-----------+------------+--------+--------
+ Nancy     | female     |    165 |    4.5
+ Jim       | male       |    189 |    6.2
+ Eric      | non-binary |    173 |    5.8
+(3 rows)
+
+ncharrington=# BEGIN;
+BEGIN
+ncharrington=# ALTER TABLE migrationPractice add column age;
+ERROR:  syntax error at or near ";"
+LINE 1: ALTER TABLE migrationPractice add column age;
+                                                    ^
+ncharrington=# ALTER TABLE migrationPractice add column age integer;
+ERROR:  current transaction is aborted, commands ignored until end of transaction block
+ncharrington=# END transaction;
+ROLLBACK
+ncharrington=# BEGIN;
+BEGIN
+ncharrington=# ALTER TABLE migrationPractice add column age integer;
+ALTER TABLE
+ncharrington=# ALTER TABLE migrationPractice alter column weight set type real;
+ERROR:  syntax error at or near "type"
+LINE 1: ...R TABLE migrationPractice alter column weight set type real;
+                                                             ^
+ncharrington=# ALTER TABLE migrationPractice alter column weight type real;
+ERROR:  current transaction is aborted, commands ignored until end of transaction block
+ncharrington=# END Transaction;
+ROLLBACK
+ncharrington=# BEGIN;
+BEGIN
+ncharrington=# ALTER TABLE migrationPractice add column age integer;
+ALTER TABLE
+ncharrington=# ALTER TABLE migrationPractice alter column weight type real;
+ALTER TABLE
+ncharrington=# COMMIT;
+COMMIT
+ncharrington=# select * from migrationPractice;
+ firstname |   gender   | weight | height | age 
+-----------+------------+--------+--------+-----
+ Nancy     | female     |    165 |    4.5 |    
+ Jim       | male       |    189 |    6.2 |    
+ Eric      | non-binary |    173 |    5.8 |    
+(3 rows)
+
+ncharrington=# 
