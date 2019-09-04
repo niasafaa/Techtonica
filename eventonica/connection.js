@@ -1,14 +1,14 @@
-//require packages
-const pg = require("pg");
-const pgKey = require('./keys').pg;
+// require packages
+const { Pool } = require('pg');
+const pgKey = require('./keys');
 
- //create PostgreSQL connection
-const connection = pg.createConnection({
-  host: "localhost",
-  port: 3306,
-  user: "root",
-  password: pgKey,
-  database: "eventonica"
+// create PostgreSQL connection
+const pool = new Pool({
+  host: 'localhost',
+  port: 5432,
+  user: 'postgres',
+  password: pgKey.dbPassword,
+  database: 'eventonica'
 });
 
- module.exports = connection;
+module.exports = pool;
