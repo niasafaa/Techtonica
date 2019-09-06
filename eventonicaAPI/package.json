@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "dotenv": "^8.1.0",
+    "eventful-node": "^1.1.1",
+    "express": "^4.17.1",
+    "inquirer": "*",
+    "pg": "*"
+  }
+}
